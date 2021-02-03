@@ -1,3 +1,9 @@
+trigger:
+- master
+pool:
+  vmImage: 'ubuntu-latest'
+steps:
+Settings
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
