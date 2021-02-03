@@ -14,6 +14,6 @@ steps:
     location: 'East US'
     templateLocation: 'Linked artifact'
     csmFile: 'createwebapp/azuredeploy.json'
-    overrideParameters: '-projectName AzureRMADO -linkedTemplateUri https://raw.githubusercontent.com/sunkada/AzureRMADO/master/createwebapp/linkedStorageAccount.json?token=ALO2QNVBWGGLLUQL72VD73TADJWDA'
+    overrideParameters: '-projectName AzureRMADO -linkedTemplateUri https://raw.githubusercontent.com/sunkada/AzureRMADO/master/createwebapp/linkedStorageAccount.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
