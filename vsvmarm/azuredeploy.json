@@ -53,11 +53,17 @@
                 "description": "The base URI where artifacts required by this template are located including a trailing '/'"
             },
             "defaultValue": "[deployment().properties.templateLink.uri]"
+        },
+        "_artifactsLocationSasToken": {
+            "type": "securestring",
+            "defaultValue": "",
+            "metadata": {
+                "description": "SAS Token for accessing script path"
+            }
         }
-        
     },
     "variables":{
-        "scriptUrl": "[uri(parameters('_artifactsLocation'),concat('installscript.ps1'))]"
+        "scriptUrl": "[uri(parameters('_artifactsLocation'),concat('installscript.ps1',parameters('_artifactsLocationSasToken')))]"
     },
     "resources": [    
         {
