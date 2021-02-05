@@ -3,11 +3,11 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "adminUser": {
-            "value": "surao" 
+            "value": "GEN-UNIQUE-10" 
         },
         
         "adminPassword": {
-            "value": "Passw0rd@123" 
+            "value": "GEN-PASSWORD" 
         }
         
     }
