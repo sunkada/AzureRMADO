@@ -14,5 +14,6 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: 'vsvmarm/azuredeploy.json'
     csmParametersFile: 'vsvmarm/azuredeploy.parameters.json'
+    overrideParameters: '-TemplateUri https://raw.githubusercontent.com/sunkada/AzureRMADO/master/vsvmarm/azuredeploy.json'
     deploymentMode: 'Incremental'
     deploymentName: 'vsvmarm'
