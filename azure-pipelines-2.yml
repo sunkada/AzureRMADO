@@ -9,7 +9,7 @@ steps:
     azureResourceManagerConnection: 'Azure connection'
     subscriptionId: '642b54b2-923d-4cae-81f1-c848ca6ed09f'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'vsvmarm'
+    resourceGroupName: 'snrvsvmarm'
     location: 'East US'
     templateLocation: 'Linked artifact'
     csmFile: 'vsvmarm/azuredeploy.json'
