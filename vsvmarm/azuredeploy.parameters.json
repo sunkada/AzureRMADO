@@ -7,7 +7,12 @@
         },
         
         "adminPassword": {
-            "value": "GEN-PASSWORD" 
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/642b54b2-923d-4cae-81f1-c848ca6ed09f/resourceGroups/aks-workshop-rg/providers/Microsoft.KeyVault/vaults/snrkv"
+                },
+                "secretName": "admin-secret"
+            } 
         }
         
     }
