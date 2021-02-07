@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: aksauto-ingress
+  namespace: aks-workshop-dev
+  annotations:    
+    kubernetes.io/ingress.class: nginx    
+    nginx.ingress.kubernetes.io/rewrite-target: /$1    
+    # nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/enable-cors: "true"    
+spec:
+  # tls:
+  # - hosts:
+  #   - ingress-dev.wkshpdev.com
+  #   secretName: aks-workshop-tls-secret  
+  rules:
+  - host: ingress-dev.wkshpdev.com
+    http:
+      paths:
+      - path: /?(.*)
+        backend:
+          serviceName: ratingsweb-service
+          servicePort: 80
+      - path: /bkend/?(.*)
+        backend:
+          serviceName: ratingsapi-service
+          servicePort: 80
+      - path: /iot/?(.*)
+        backend:
+          serviceName: iotmqttsender-service
+          servicePort: 80
+

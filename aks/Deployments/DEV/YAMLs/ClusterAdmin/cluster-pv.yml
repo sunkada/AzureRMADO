@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: aks-workshop-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteMany
+  azureFile:
+    secretNamespace: aks-workshop-dev
+    secretName: aks-workshop-storage-secret
+    shareName: aks-file-share
+    readOnly: false
+  mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=10000
+  - gid=10000
+  

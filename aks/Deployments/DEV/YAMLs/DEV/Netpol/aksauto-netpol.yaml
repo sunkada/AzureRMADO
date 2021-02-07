@@ -1,0 +1,23 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: aks-auto-netpol
+  namespace: aks-workshop-dev  
+spec:
+  podSelector:
+    matchLabels:
+      app: ratingsapi-pod
+  policyTypes:
+  - Ingress
+  ingress:
+  # - {}
+  - ports:
+    - protocol: TCP
+      port: 3000
+    from:
+      - namespaceSelector:
+          matchLabels:
+            name: aks-workshop-dev
+      - podSelector:
+          matchLabels:
+            app: ratingsweb-pod
