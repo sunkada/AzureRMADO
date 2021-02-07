@@ -18,7 +18,7 @@ param([Parameter(Mandatory=$true)] [string] $resourceGroup = "aks-workshop-rg",
       [Parameter(Mandatory=$true)] [string] $kvTemplateFileName = "aksauto-keyvault-deploy",        
       [Parameter(Mandatory=$true)] [string] $subscriptionId = "642b54b2-923d-4cae-81f1-c848ca6ed09f",
       [Parameter(Mandatory=$true)] [string] $objectId = "72f988bf-86f1-41af-91ab-2d7cd011db47",
-      [Parameter(Mandatory=$true)] [string] $baseFolderPath = "<baseFolderPath>") # As per host devops machine
+      [Parameter(Mandatory=$true)] [string] $baseFolderPath = "AzureRMADO/aks/Deployments/DEV/Templates/") # As per host devops machine
 
 $vnetRole = "Network Contributor"
 $acrSPRole = "acrpush"
