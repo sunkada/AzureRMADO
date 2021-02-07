@@ -27,7 +27,7 @@ steps:
       -networkTemplateFileName "aksauto-network-deploy" `
       -acrTemplateFileName "aksauto-acr-deploy" `
       -kvTemplateFileName "aksauto-keyvault-deploy" `
-      -subscriptionId "642b54b2-923d-4cae-81f1-c848ca6ed09f" `
+      -subscriptionId "Snr (642b54b2-923d-4cae-81f1-c848ca6ed09f)" `
       -objectId "72f988bf-86f1-41af-91ab-2d7cd011db47" `
       -baseFolderPath "AzureRMADO/aks/Deployments/DEV/Templates/"
     azurePowerShellVersion: 'latestVersion'
