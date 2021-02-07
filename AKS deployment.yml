@@ -8,5 +8,27 @@ steps:
     azureSubscription: 'Azure connection'
     ScriptType: 'FilePath'
     ScriptPath: 'aks/Deployments/DEV/Setup/aksauto-cluster-preconfig.ps1'
+    scriptArguments:
+      -resourceGroup "aks-workshop-rg" `
+      -projectName "aks-workshop" `
+      -location "eastus" `
+      -clusterName "snr-aks-cluster" `
+      -acrName "snraksacr" `
+      -keyVaultName "snr-aks-kv" `
+      -aksVNetName "snr-aks-vnet" `
+      -aksVNetPrefix "173.0.0.0/16" `
+      -aksSubnetName "snr-aks-subnet" `
+      -aksSubNetPrefix "173.0.0.0/22" `
+      -appgwSubnetName "aks-workshop-appgw-subnet" `
+      -appgwSubnetPrefix "173.0.4.0/27" `
+      -vrnSubnetName "snr-vrn-subnet" `
+      -vrnSubnetPrefix "173.0.5.0/24" `
+      -appgwName "aks-workshop-appgw" `
+      -networkTemplateFileName "aksauto-network-deploy" `
+      -acrTemplateFileName "aksauto-acr-deploy" `
+      -kvTemplateFileName "aksauto-keyvault-deploy" `
+      -subscriptionId "642b54b2-923d-4cae-81f1-c848ca6ed09f" `
+      -objectId "72f988bf-86f1-41af-91ab-2d7cd011db47" `
+      -baseFolderPath "AzureRMADO/aks/Deployments/DEV/Templates/"
     azurePowerShellVersion: 'latestVersion'
     pwsh: true
