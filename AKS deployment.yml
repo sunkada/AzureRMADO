@@ -1,0 +1,7 @@
+- task: AzurePowerShell@4
+  inputs:
+    azureSubscription: 'Azure connection'
+    ScriptType: 'FilePath'
+    ScriptPath: 'aks/Deployments/DEV/Setup/aksauto-cluster-preconfig.ps1'
+    azurePowerShellVersion: 'latestVersion'
+    pwsh: true
