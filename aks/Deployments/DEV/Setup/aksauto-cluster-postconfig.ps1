@@ -1,4 +1,4 @@
-param([Parameter(Mandatory=$false)]   [string] $resourceGroup = "aks-workshop-rg",        
+param([Parameter(Mandatory=$false)]   [string] $resourceGroup = "snr-aks-rg",        
         [Parameter(Mandatory=$false)] [string] $projectName = "snr-aks-workshop",
         [Parameter(Mandatory=$false)] [string] $nameSpaceName = "aks-workshop-dev",
         [Parameter(Mandatory=$false)] [string] $location = "eastus",
