@@ -1,5 +1,5 @@
 param([Parameter(Mandatory=$true)]  [string] $mode,        
-      [Parameter(Mandatory=$true)]  [string] $resourceGroup = "aks-workshop-rg",
+      [Parameter(Mandatory=$true)]  [string] $resourceGroup = "snr-aks-rg",
       [Parameter(Mandatory=$false)] [string] $location = "eastus",
       [Parameter(Mandatory=$true)]  [string] $clusterName = "snr-aks-cluster",
       [Parameter(Mandatory=$false)] [string] $acrName = "snraksacr",
