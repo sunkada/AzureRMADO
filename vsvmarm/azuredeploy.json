@@ -30,12 +30,13 @@
         },
         "vmsize": {
             "type": "string",
-            "defaultValue": "Standard_D4s_v4",
+            "defaultValue": "Standard_DS3_v2",
             "allowedValues": [
                 "Standard_D4s_v3",
                 "Standard_D8s_v3",
                 "Standard_D8s_v4",
-                "Standard_D4s_v4"
+                "Standard_D4s_v4",
+                "Standard_DS3_v2"
             ],
             "metadata": {
                 "description": "VM Size for lab-vm"
